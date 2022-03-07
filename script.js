@@ -12,7 +12,10 @@ const currentPlayerTurn = () => `It's ${currentPlayer}'s turn`
 
 statusDisplay.innerHTML = currentPlayerTurn()
 
-function handleCellPlayed() {}
+function handleCellPlayed(clickedCell, clickedCellIndex) {
+  gameState[clickedCellIndex] = currentPlayer
+  clickedCell.innerHTML = currentPlayer
+}
 
 function handlePlayerChange() {}
 
