@@ -28,7 +28,10 @@ function handleCellPlayed(clickedCell, clickedCellIndex) {
   clickedCell.innerHTML = currentPlayer
 }
 
-function handlePlayerChange() {}
+function handlePlayerChange() {
+  currentPlayer = currentPlayer === 'X' ? 'O' : 'X'
+  statusDisplay.innerHTML = currentPlayerTurn()
+}
 
 function handleResultValidation() {
   let roundWon = false
