@@ -11,3 +11,21 @@ const drawMessage = () => `Game ended in a draw!`
 const currentPlayerTurn = () => `It's ${currentPlayer}'s turn`
 
 statusDisplay.innerHTML = currentPlayerTurn()
+
+function handleCellPlayed() {}
+
+function handlePlayerChange() {}
+
+function handleResultValidation() {}
+
+function handleCellClick() {}
+
+function handleRestartGame() {}
+
+document
+  .querySelectorAll('.cell')
+  .forEach((cell) => cell.addEventListener('click', handleCellClick))
+
+document
+  .querySelector('.game--restart')
+  .addEventListener('click', handleRestartGame)
