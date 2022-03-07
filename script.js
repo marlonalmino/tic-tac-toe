@@ -81,7 +81,13 @@ function handleCellClick(clickedCellEvent) {
   handleResultValidation()
 }
 
-function handleRestartGame() {}
+function handleRestartGame() {
+  gameActive = true
+  currentPlayer = 'X'
+  gameState = ['', '', '', '', '', '', '', '', '']
+  statusDisplay.innerHTML = currentPlayerTurn()
+  document.querySelectorAll('.cell').forEach((cell) => (cell.innerHTML = ''))
+}
 
 document
   .querySelectorAll('.cell')
